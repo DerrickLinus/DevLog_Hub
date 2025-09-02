@@ -20,7 +20,7 @@ export default function TagsPage() {
 		<div className="bg-white min-h-screen">
 			<div className="max-w-4xl mx-auto px-6 py-12">
 				<div className="mb-8">
-					<h1 className="text-3xl font-bold text-gray-900 mb-4">Tags</h1>
+					<h1 className="text-3xl font-bold text-gray-900 mb-4">标签</h1>
 					<p className="text-gray-600">探索不同主题的文章内容</p>
 				</div>
 				

@@ -42,7 +42,7 @@ export default function ClientPagination({ allPosts, postsPerPage, totalPages }:
 										month: 'short', 
 										day: 'numeric' 
 									})}</span>
-									<span>Estimated Reading Time: {p.readingMinutes} min</span>
+									<span>Reading Time: {p.readingMinutes} min</span>
 									{p.frontmatter.Author && <span>Author: {p.frontmatter.Author}</span>}
 								</div>
 								

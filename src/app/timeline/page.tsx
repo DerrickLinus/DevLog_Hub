@@ -21,7 +21,7 @@ export default function TimelinePage() {
 		<div className="bg-white min-h-screen">
 			<div className="max-w-4xl mx-auto px-6 py-12">
 				<div className="mb-8">
-					<h1 className="text-3xl font-bold text-gray-900 mb-4">Archive</h1>
+					<h1 className="text-3xl font-bold text-gray-900 mb-4">归档</h1>
 					<p className="text-gray-600">按时间顺序浏览所有文章</p>
 				</div>
 				

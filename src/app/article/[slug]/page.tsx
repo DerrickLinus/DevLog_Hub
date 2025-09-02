@@ -75,7 +75,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
 								day: 'numeric' 
 							})}</span>
 							<span>•</span>
-							<span>Estimated Reading Time: {post.readingMinutes} min</span>
+							<span>Reading Time: {post.readingMinutes} min</span>
 							{post.frontmatter.Author && (
 								<>
 									<span>•</span>
