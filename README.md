@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevLog Hub
 
-## Getting Started
+一个基于 Next.js + Tailwind 的个人技术博客示例，实现文章列表、详情、专栏、标签与时间线。
 
-First, run the development server:
+## 本地运行
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 `http://localhost:3000` 访问。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 内容编写
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 在 `content/posts` 中新增 Markdown 文件（`.md`）。
+- 支持 Frontmatter 字段：
+  - `Title`、`Date`、`Author`、`Tags`、`Column`、`Summary`
+- 文件名即为文章 `slug`，如 `how-to-build-a-blog.md` → `/article/how-to-build-a-blog`
 
-## Learn More
+## 功能清单
+- 响应式导航栏（桌面端/移动端）
+- 首页文章列表（自动摘要、标签、专栏、阅读时长）
+- 文章详情（Markdown 渲染、TOC、代码高亮）
+- 专栏列表与专栏文章页
+- 标签云与标签文章页
+- 时间线（按年/月分组）
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 部署建议
+- 推荐 Vercel/Netlify，连接仓库即可自动部署。
