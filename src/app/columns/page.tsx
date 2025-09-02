@@ -1,5 +1,16 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getAllColumns, getAllPosts } from '../../lib/markdown';
+
+export const metadata: Metadata = {
+	title: '专栏',
+	description: '按主题分类的技术文章系列，包括通信技术、AI、前端开发等内容。',
+	openGraph: {
+		title: '专栏 - DevLog Hub',
+		description: '按主题分类的技术文章系列，包括通信技术、AI、前端开发等内容。',
+		type: 'website',
+	},
+};
 
 // 模拟的层级结构数据，基于现有的专栏
 const getColumnHierarchy = () => {

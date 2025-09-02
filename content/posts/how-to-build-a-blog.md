@@ -1,13 +1,13 @@
 ---
 Title: 如何构建一个现代化个人博客
 Date: 2024-08-28
-Author: 张三
+Author: Deng Linhui
 Tags:
   - React
   - JavaScript
   - Next.js
 Column: 前端工程化
-Summary: 从零开始使用 Next.js、Tailwind 与 Markdown 管线构建个人技术博客。
+Summary: 从零开始使用 Next.js、Tailwind 与 Markdown 管线构建个人技术博客
 ---
 
 # 引言

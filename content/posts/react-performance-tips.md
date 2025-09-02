@@ -1,12 +1,12 @@
 ---
 Title: React 性能优化实用技巧
 Date: 2024-05-10
-Author: 张三
+Author: Deng Linhui
 Tags:
   - React
   - Performance
 Column: 性能优化
-Summary: 掌握关键的性能优化策略，打造流畅的 React 应用。
+Summary: React 性能优化的核心技术，包括组件优化、列表虚拟化和图片懒加载等实用方法
 ---
 
 # 概览

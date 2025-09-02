@@ -1,6 +1,17 @@
 import Link from 'next/link';
 import dayjs from 'dayjs';
+import type { Metadata } from 'next';
 import { groupPostsByYearMonth } from '../../lib/markdown';
+
+export const metadata: Metadata = {
+	title: '时间线',
+	description: '按时间顺序浏览所有技术文章，回顾学习轨迹和技术成长过程。',
+	openGraph: {
+		title: '时间线 - DevLog Hub',
+		description: '按时间顺序浏览所有技术文章，回顾学习轨迹和技术成长过程。',
+		type: 'website',
+	},
+};
 
 export default function TimelinePage() {
 	const grouped = groupPostsByYearMonth();

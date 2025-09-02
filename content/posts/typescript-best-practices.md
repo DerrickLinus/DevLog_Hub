@@ -1,12 +1,12 @@
 ---
 Title: TypeScript 最佳实践指南
 Date: 2023-12-01
-Author: 李四
+Author: Deng Linhui
 Tags:
   - TypeScript
   - Engineering
 Column: 前端工程化
-Summary: 通过类型系统提升可维护性与团队协作效率的实践总结。
+Summary: 通过类型系统提升可维护性与团队协作效率的实践总结
 ---
 
 # 核心理念

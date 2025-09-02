@@ -55,7 +55,7 @@ export function readPostBySlug(slug: string): PostItem | null {
 		slug,
 		frontmatter: fm,
 		content,
-		excerpt: excerpt || content.slice(0, 180),
+		excerpt: fm.Summary || excerpt || content.slice(0, 180),
 		readingMinutes: Math.max(1, Math.round(stats.minutes)),
 		dateISO,
 	};

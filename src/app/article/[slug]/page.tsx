@@ -1,9 +1,57 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getAllPostSlugs, readPostBySlug, renderMarkdownToHtml } from '../../../lib/markdown';
+import TableOfContents from '../../../components/TableOfContents';
 
 export async function generateStaticParams() {
 	return getAllPostSlugs().map((slug) => ({ slug }));
+}
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+	const params = await props.params;
+	const post = readPostBySlug(params.slug);
+	
+	if (!post) {
+		return {
+			title: 'Page Not Found | DevLog Hub'
+		};
+	}
+	
+	return {
+		title: `${post.frontmatter.Title} | DevLog Hub`,
+		description: post.excerpt,
+		keywords: post.frontmatter.Tags?.join(', '),
+		authors: [{ name: post.frontmatter.Author || 'DevLog Hub' }],
+		openGraph: {
+			title: post.frontmatter.Title,
+			description: post.excerpt,
+			type: 'article',
+			publishedTime: post.dateISO,
+			modifiedTime: post.dateISO,
+			authors: [post.frontmatter.Author || 'DevLog Hub'],
+			tags: post.frontmatter.Tags,
+			siteName: 'DevLog Hub',
+			images: [
+				{
+					url: '/og-image.jpg',
+					width: 1200,
+					height: 630,
+					alt: post.frontmatter.Title,
+				}
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: post.frontmatter.Title,
+			description: post.excerpt,
+			images: ['/og-image.jpg'],
+			creator: '@devloghub',
+		},
+		alternates: {
+			canonical: `https://devlog-hub.vercel.app/article/${params.slug}`,
+		},
+	};
 }
 
 export default async function ArticlePage(props: { params: Promise<{ slug: string }> }) {
@@ -58,6 +106,9 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
 					
 					<div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: html }} />
 				</article>
+				
+				{/* 目录组件 */}
+				<TableOfContents content={html} />
 			</div>
 		</div>
 	);

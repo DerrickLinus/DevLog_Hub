@@ -1,5 +1,16 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getAllTags } from '../../lib/markdown';
+
+export const metadata: Metadata = {
+	title: '标签',
+	description: '按标签分类的技术文章，快速找到你感兴趣的内容。',
+	openGraph: {
+		title: '标签 - DevLog Hub',
+		description: '按标签分类的技术文章，快速找到你感兴趣的内容。',
+		type: 'website',
+	},
+};
 
 export default function TagsPage() {
 	const tags = Array.from(getAllTags().entries()).sort((a,b) => b[1]-a[1]);
