@@ -11,6 +11,8 @@ import rehypeRaw from 'rehype-raw';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import readingTime from 'reading-time';
 import dayjs from 'dayjs';
@@ -72,9 +74,11 @@ export async function renderMarkdownToHtml(markdown: string): Promise<string> {
 		.use(remarkParse)
 		.use(remarkGfm)
 		.use(remarkFrontmatter, ['yaml'])
+        .use(remarkMath)
 		.use(remarkToc, { heading: '目录|toc', tight: true, maxDepth: 3 })
 		.use(remarkRehype, { allowDangerousHtml: true })
 		.use(rehypeRaw)
+        .use(rehypeKatex)
 		.use(rehypeSlug)
 		.use(rehypeAutolinkHeadings, { behavior: 'wrap' })
 		.use(rehypeHighlight)

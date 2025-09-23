@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -19,8 +20,15 @@ export default function Navbar() {
 			<div className="mx-auto max-w-6xl px-6 py-4">
 				<div className="flex items-center justify-between">
 					<Link href="/" className="flex items-center space-x-2">
+						<Image 
+							src="/Avatar.jpg" 
+							alt="DevLog Hub Avatar" 
+							width={32} 
+							height={32} 
+							className="rounded-full object-cover"
+							priority
+						/>
 						<span className="text-2xl font-bold text-gray-900">DevLog Hub</span>
-						<span className="text-base text-gray-500">📚 |</span>
 					</Link>
 					
 					<button 

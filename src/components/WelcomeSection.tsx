@@ -57,7 +57,7 @@ export default function WelcomeSection() {
           Welcome to DevLog Hub
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed mb-8">
-          Hi, 这里是Deng Linhui的个人技术博客，记录学习笔记与技术思考<br />
+          Hi, 这里是Derrick Linus的个人技术博客，记录学习笔记与技术思考<br />
           我目前是一名在校研究生，研究方向为通信+AI<br />
           希望我的博客文章对你有所帮助，欢迎交流与指正
           <span className="inline-block ml-1">😉</span>
