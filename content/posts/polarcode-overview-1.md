@@ -5,7 +5,7 @@ Author: Derrick Linus
 Tags:
   - 极化码
 Column: 信道编码
-Summary: 极化码的背景、核心思想、前置知识
+Summary: 背景、核心思想、前置知识
 ---
 
 

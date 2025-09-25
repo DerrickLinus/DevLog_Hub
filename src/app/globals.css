@@ -131,3 +131,10 @@ body {
   font-size: 1.125rem;
   line-height: 1.8;
 }
+
+/* 图片下方的 Markdown 斜体标题自动居中（保持 KaTeX 公式渲染） */
+.prose p:has(> img) + p:has(> em:only-child) {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
