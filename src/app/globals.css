@@ -71,8 +71,10 @@ body {
 }
 
 .prose p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #6b7280;
+  font-size: 1.125rem;
+  line-height: 2.0;
 }
 
 /* 数学公式（KaTeX）显示优化 */
@@ -110,12 +112,14 @@ body {
 }
 
 .prose ul, .prose ol {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   padding-left: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
 }
 
 .prose li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .prose blockquote {
@@ -124,4 +128,6 @@ body {
   margin: 1.5rem 0;
   font-style: italic;
   color: #6b7280;
+  font-size: 1.125rem;
+  line-height: 1.8;
 }

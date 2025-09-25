@@ -111,7 +111,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
       )}
 
       {/* 桌面端侧边栏（左侧靠上） */}
-      <div className="hidden lg:block fixed left-8 top-28 w-64 z-30">
+      <div className="hidden lg:block fixed left-8 top-28 w-68 z-30">
         <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-lg max-h-[70vh] overflow-y-auto">
           <h3 className="font-semibold mb-3 text-gray-900 text-sm">目录</h3>
           <nav className="space-y-1">

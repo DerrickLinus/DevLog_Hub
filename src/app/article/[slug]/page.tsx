@@ -62,7 +62,7 @@ export default async function ArticlePage(props: { params: Promise<{ slug: strin
 
 	return (
 		<div className="bg-white min-h-screen">
-			<div className="max-w-4xl mx-auto px-6 py-12">
+			<div className="max-w-7xl mx-auto px-6 py-12 lg:pl-80">
 				<article>
 					<header className="mb-12 pb-8 border-b border-gray-200">
 						<h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
